@@ -22,8 +22,12 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <Marquee />
-        <Range />
+        {/* The band and the range are one block: the band holds the top of the
+            window while the range scrolls under it, then lets go at the join. */}
+        <div className="relative">
+          <Marquee />
+          <Range />
+        </div>
         <Devices />
         <Service />
       </main>
