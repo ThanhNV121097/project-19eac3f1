@@ -18,7 +18,7 @@ export default function Range() {
       if (calm) return;
       const trigger = { trigger: root.current, start: "top 72%" };
 
-      gsap.from("[data-line] ", {
+      gsap.from("[data-line]", {
         yPercent: 115,
         duration: 1.1,
         ease: "expo.out",
