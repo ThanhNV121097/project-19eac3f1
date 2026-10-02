@@ -1,33 +1,33 @@
-import { T, useList, useContent } from "./editable";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Marquee from "./components/Marquee";
+import Range from "./components/Range";
+import Devices from "./components/Devices";
+import Service from "./components/Service";
+import Visit from "./components/Visit";
+import { useSmoothScroll } from "./motion";
 
 /**
- * The shell the design replaces.
+ * Apple IT — a dark room with one light on each object.
  *
- * This file is a placeholder so the scaffold builds and runs before the
- * design exists. The team rewrites it and adds components under
- * src/components/; what must stay is the rule every component follows: the
- * words come from content.json through <T/>, the colours from theme.css.
+ * The page reads as one film: the curtain lifts off the hero, the category
+ * band runs across the join, the five devices stack and hold the screen one at
+ * a time, then the counter and the invitation. Lenis carries the scroll.
  */
 export default function App() {
-  const links = useList<{ label: string; href: string }>("nav.links");
-  const name = useContent("site.name");
+  useSmoothScroll();
+
   return (
-    <div className="min-h-screen bg-ground text-ink font-body">
-      <header className="mx-auto max-w-page px-[var(--gutter)] py-6 flex items-center justify-between">
-        <T k="site.name" as="a" href="/" className="font-display text-lg" />
-        <nav className="flex gap-6 text-sm">
-          {links.map((l, i) => <T key={i} k={`nav.links.${i}.label`} as="a" href={l.href} />)}
-          <T k="nav.cta.label" as="a" href="#contact" className="rounded bg-accent px-4 py-2 text-accent-ink" />
-        </nav>
-      </header>
-      <main className="mx-auto max-w-page px-[var(--gutter)] py-24">
-        <T k="hero.headline" as="h1" className="text-[clamp(44px,7vw,104px)] max-w-[14ch]" />
-        <T k="hero.sub" as="p" className="mt-6 text-xl text-ink-soft max-w-[48ch]" />
-        <T k="hero.cta.label" as="a" href="#contact" className="mt-10 inline-block rounded bg-accent px-6 py-3 text-accent-ink" />
+    <div className="min-h-screen bg-ground font-body text-ink">
+      <Header />
+      <main>
+        <Hero />
+        <Marquee />
+        <Range />
+        <Devices />
+        <Service />
       </main>
-      <footer className="mx-auto max-w-page px-[var(--gutter)] py-12 text-sm text-ink-soft border-t border-line">
-        <T k="footer.line" /> · {name}
-      </footer>
+      <Visit />
     </div>
   );
 }
