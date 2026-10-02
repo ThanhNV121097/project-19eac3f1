@@ -128,7 +128,7 @@ export default function Hero() {
             <T k="hero.line2" as="span" data-line className="block italic text-ink-soft" />
           </span>
         </h1>
-        <div className="mt-[var(--space-8)] flex flex-col gap-[var(--space-8)] md:flex-row md:items-end md:justify-between">
+        <div className="mt-[var(--space-8)] flex max-w-[640px] flex-col gap-[var(--space-6)]">
           <T
             data-fade
             k="hero.sub"
