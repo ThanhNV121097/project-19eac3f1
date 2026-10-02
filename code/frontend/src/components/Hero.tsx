@@ -80,7 +80,9 @@ export default function Hero() {
       className="relative h-[100svh] min-h-[620px] w-full overflow-hidden"
       style={{ visibility: calm ? "visible" : "hidden" }}
     >
-      <div className="absolute inset-0 -z-10 overflow-hidden">
+      {/* The picture is an object under one light, not a wash behind the type:
+          a tall frame held to the right half, bleeding off the top edge. */}
+      <div className="absolute inset-y-0 right-0 -z-10 w-full overflow-hidden md:w-[52vw]">
         <img
           data-hero-img
           src="/images/hero.jpg"
@@ -91,7 +93,13 @@ export default function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, color-mix(in srgb, var(--ground) 55%, transparent) 0%, transparent 32%, color-mix(in srgb, var(--ground) 55%, transparent) 72%, var(--ground) 100%)",
+              "linear-gradient(90deg, var(--ground) 0%, color-mix(in srgb, var(--ground) 30%, transparent) 38%, transparent 100%)",
+          }}
+        />
+        <div
+          className="absolute inset-x-0 bottom-0 h-1/3"
+          style={{
+            background: "linear-gradient(180deg, transparent 0%, var(--ground) 100%)",
           }}
         />
       </div>
