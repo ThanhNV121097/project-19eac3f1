@@ -11,6 +11,7 @@ import { gsap, calm } from "../motion";
 export default function Range() {
   const root = useRef<HTMLDivElement>(null);
   const stats = useList<{ value: string; label: string }>("range.stats");
+  const lines = useList<{ word: string }>("marquee.items");
 
   useGSAP(
     () => {
