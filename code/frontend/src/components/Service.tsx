@@ -4,9 +4,12 @@ import { T, useList } from "../editable";
 import { gsap, calm } from "../motion";
 
 /**
- * What happens at the counter. A hard cut to the surface tone — the
- * teenage.engineering section swap — and a grid whose cells arrive one at a
- * time rather than as a row, which is Land-book's stagger.
+ * What happens at the counter — and the one hard cut on the page. The dark
+ * room ends on a straight edge and this section is daylight: the `--lit`
+ * ground, dark ink, its own rule colour, no transition at all. That is
+ * teenage.engineering's section swap, and it is what the dark half is lit
+ * against. The grid's cells arrive one at a time rather than as a row, which
+ * is Land-book's stagger.
  */
 export default function Service() {
   const root = useRef<HTMLDivElement>(null);
@@ -34,9 +37,9 @@ export default function Service() {
   );
 
   return (
-    <section id="service" ref={root} className="relative z-10 bg-surface">
+    <section id="service" ref={root} className="relative z-10 bg-lit text-lit-ink">
       <div className="mx-auto max-w-page px-[var(--gutter)] py-[var(--space-32)]">
-        <T k="service.eyebrow" as="p" className="text-label uppercase text-accent" />
+        <T k="service.eyebrow" as="p" className="text-label uppercase text-accent-lit" />
         <h2 className="mt-[var(--space-8)] max-w-[14ch] text-[clamp(40px,6.4vw,92px)]">
           <span className="line-mask">
             <T k="service.headline" as="span" data-line className="block" />
@@ -45,31 +48,34 @@ export default function Service() {
         <T
           k="service.body"
           as="p"
-          className="mt-[var(--space-8)] max-w-[58ch] text-[15px] leading-body text-ink-soft"
+          className="mt-[var(--space-8)] max-w-[58ch] text-[15px] leading-body text-lit-ink-soft"
         />
 
-        <div data-grid className="mt-[var(--space-24)] grid grid-cols-1 border-t border-line md:grid-cols-2">
+        <div
+          data-grid
+          className="mt-[var(--space-24)] grid grid-cols-1 border-t border-lit-line md:grid-cols-2"
+        >
           {items.map((_, i) => (
             <div
               key={i}
               data-cell
-              className="group border-b border-line py-[var(--space-8)] transition-colors duration-200 ease-out md:px-[var(--space-8)] md:even:border-l md:odd:pl-0"
+              className="group border-b border-lit-line py-[var(--space-8)] transition-colors duration-200 ease-out md:px-[var(--space-8)] md:odd:pl-0 md:even:border-l"
             >
               <div className="flex items-start justify-between gap-[var(--space-6)]">
                 <T
                   k={`service.items.${i}.title`}
                   as="h3"
-                  className="font-display text-[clamp(26px,3vw,40px)] leading-tight transition-colors duration-200 ease-out group-hover:text-accent"
+                  className="font-display text-[clamp(26px,3vw,40px)] leading-tight transition-colors duration-200 ease-out group-hover:text-accent-lit"
                 />
                 <span
                   aria-hidden="true"
-                  className="mt-[var(--space-2)] h-[7px] w-[7px] shrink-0 rounded-pill bg-line transition-colors duration-200 ease-out group-hover:bg-accent"
+                  className="mt-[var(--space-2)] h-[7px] w-[7px] shrink-0 rounded-pill bg-lit-line transition-colors duration-200 ease-out group-hover:bg-accent-lit"
                 />
               </div>
               <T
                 k={`service.items.${i}.body`}
                 as="p"
-                className="mt-[var(--space-4)] max-w-[46ch] text-[14px] leading-body text-ink-soft"
+                className="mt-[var(--space-4)] max-w-[46ch] text-[14px] leading-body text-lit-ink-soft"
               />
             </div>
           ))}
