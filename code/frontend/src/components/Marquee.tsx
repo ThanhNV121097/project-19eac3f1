@@ -32,21 +32,14 @@ export default function Marquee() {
         repeat: -1,
       });
 
-      // Pinned with no spacer: the band holds the top of the window and the
-      // section below scrolls up underneath it.
-      gsap.matchMedia().add("(min-width: 768px)", () => {
-        const pin = gsap.timeline({
-          scrollTrigger: {
-            trigger: band,
-            start: "top top+=72",
-            endTrigger: "#range",
-            end: "bottom 65%",
-            pin: true,
-            pinSpacing: false,
-          },
-        });
-        // It dims as it is left behind, so it reads as a layer, not a header.
-        pin.to(band, { opacity: 0.55, ease: "none" });
+      // The band is pinned by CSS position:sticky inside the range block, so
+      // it holds the top of the window while that section scrolls under it and
+      // lets go on its own at the bottom. GSAP only dims it as it is passed,
+      // so it reads as a layer over the page rather than a second header.
+      gsap.to(band, {
+        opacity: 0.5,
+        ease: "none",
+        scrollTrigger: { trigger: "#range", start: "top top", end: "bottom 70%", scrub: true },
       });
 
       let last = window.scrollY;
