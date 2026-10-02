@@ -41,6 +41,14 @@ export default function Range() {
         stagger: 0.12,
         scrollTrigger: trigger,
       });
+      gsap.from("[data-rule-row]", {
+        opacity: 0,
+        x: -14,
+        duration: 0.7,
+        ease: "expo.out",
+        stagger: 0.06,
+        scrollTrigger: trigger,
+      });
     },
     { scope: root },
   );
