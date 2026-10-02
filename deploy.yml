@@ -1,0 +1,46 @@
+# Deployment overlay. Layered on top of docker-compose.yml, never used alone:
+#
+#   docker compose -f docker-compose.yml -f deploy.yml pull
+#   docker compose -f docker-compose.yml -f deploy.yml up -d
+#
+# Three differences from running the project locally, and each is the reason
+# this is a separate file rather than a flag:
+#
+#   no published ports    the proxy reaches these containers over the shared
+#                         network, so the number of deployed projects is not
+#                         bounded by the number of host ports. Publishing would
+#                         also defeat Docker's network isolation for that port —
+#                         measured, and written up in aiteam's root
+#                         docker-compose.yml.
+#
+#   routing by label      the proxy configures itself from these. A deploy
+#                         writes no proxy config and reloads nothing, so two
+#                         projects deploying at the same moment cannot collide.
+#
+#   pinned image          docker-compose.yml carries both `image` and `build`,
+#                         so one file builds from source in a clone and pulls a
+#                         published image here. IMAGE_TAG is a commit SHA: a
+#                         deployment records exactly what it runs, and a
+#                         rollback names a SHA rather than hoping a moving tag
+#                         still points where it did.
+#
+# PROJECT_SLUG, IMAGE_REPO and IMAGE_TAG come from whatever runs the deploy.
+# PROJECT_SLUG has no default on purpose — a deployment that guesses which
+# address it answers on is worse than one that refuses to start.
+
+services:
+  frontend:
+    ports: !reset []
+    # Written by the deployer beside these files: the project's own third-party
+    # credentials, as supplied by the stakeholder. Always present, often empty —
+    # a missing env_file is an error, and "this project has no keys" is not.
+    env_file: [.env.deploy]
+    networks: [default, edge]
+    labels:
+      caddy: ${DEPLOY_SCHEME:-http}://${PROJECT_SLUG:?PROJECT_SLUG is required}.${DEPLOY_DOMAIN:-localhost}
+      caddy.reverse_proxy: "{{upstreams 3000}}"
+
+networks:
+  edge:
+    name: aiteam_edge
+    external: true
