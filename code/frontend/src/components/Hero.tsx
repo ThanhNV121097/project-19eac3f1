@@ -82,7 +82,7 @@ export default function Hero() {
     >
       {/* The picture is an object under one light, not a wash behind the type:
           a tall frame held to the right half, bleeding off the top edge. */}
-      <div className="absolute inset-x-0 top-0 -z-10 h-[56%] overflow-hidden md:inset-y-0 md:left-auto md:right-0 md:h-auto md:w-[52vw]">
+      <div className="absolute inset-x-0 top-0 z-0 h-[56%] overflow-hidden md:inset-y-0 md:left-auto md:right-0 md:h-auto md:w-[52vw]">
         <img
           data-hero-img
           src="/images/hero-device.jpg"
