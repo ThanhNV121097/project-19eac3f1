@@ -17,9 +17,37 @@ export default {
       },
       fontFamily: {
         display: ["var(--font-display)", "serif"],
-        body: ["var(--font-body)", "sans-serif"],
+        body: ["var(--font-body)", "ui-monospace", "monospace"],
       },
-      borderRadius: { DEFAULT: "var(--radius)" },
+      fontSize: {
+        label: ["11px", { lineHeight: "1.2", letterSpacing: "var(--tracking-label)" }],
+      },
+      fontWeight: {
+        display: "var(--weight-display)",
+        label: "var(--weight-label)",
+      },
+      letterSpacing: {
+        display: "var(--tracking-display)",
+        label: "var(--tracking-label)",
+      },
+      lineHeight: {
+        display: "var(--leading-display)",
+        body: "var(--leading-body)",
+      },
+      borderRadius: {
+        DEFAULT: "var(--radius)",
+        sm: "var(--radius-sm)",
+        pill: "var(--radius-pill)",
+      },
+      boxShadow: {
+        sm: "var(--shadow-sm)",
+        md: "var(--shadow-md)",
+        glow: "var(--shadow-glow)",
+      },
+      transitionTimingFunction: {
+        out: "var(--ease-out)",
+        "in-out": "var(--ease-in-out)",
+      },
       maxWidth: { page: "var(--page)" },
     },
   },
