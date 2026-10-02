@@ -15,6 +15,11 @@ p { margin: 0; }
 /* A line of a split headline: the word rides up out of its own clipped box. */
 .line-mask { display: block; overflow: hidden; }
 
+/* The curtain lift is a CSS animation, not a GSAP tween, so the hero resolves
+   even if the bundle never runs. GSAP choreographs the rest against it. */
+@keyframes curtain-lift { from { transform: translateY(0); } to { transform: translateY(-101%); } }
+.curtain { animation: curtain-lift var(--duration-slow) cubic-bezier(0.76, 0, 0.24, 1) 150ms both; }
+
 /* The calm fallback. Everything is in place; nothing is tied to the scroll. */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; }
