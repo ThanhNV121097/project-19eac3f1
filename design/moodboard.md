@@ -80,3 +80,11 @@ gets the page with everything in place and no scroll-tied movement at all.
 - Round 2 (1440 + 390): the hero headline at 390 was wrapping to four lines and
   losing the serif's drama; dropped to two lines of larger type and moved the
   spec strip below the fold on phones.
+- Round 3 (1440): the hero photograph was not visible at all — its frame sat at
+  `-z-10`, behind the page's own ground colour, so the curtain lifted onto an
+  empty black screen. Raised the frame to `z-0`, lifted the copy to `z-10`, and
+  regenerated the hero picture with a real rim light on the titanium edge.
+- Round 4 (1440 + 390): with the picture showing, the left edge of the frame
+  cut a hard vertical seam down the middle of the hero. Re-graded the veil to a
+  four-stop gradient so the photograph dissolves into the ground instead of
+  ending at a line.
