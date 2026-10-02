@@ -71,7 +71,7 @@ export default function Marquee() {
   );
 
   return (
-    <div ref={root} className="relative z-20">
+    <div ref={root} className="sticky top-0 z-20">
       <div
         data-band
         className="relative overflow-hidden border-y border-line bg-surface py-[var(--space-6)]"
