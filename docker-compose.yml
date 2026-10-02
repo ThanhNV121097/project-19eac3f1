@@ -1,0 +1,35 @@
+# Shape: static — a frontend and nothing else.
+#
+# Both `image` and `build` are declared on purpose. `docker compose build` uses
+# the build section and tags the result as `image`; a deployment host runs
+# `docker compose pull` against the same file and never builds anything. One
+# file, both directions.
+#
+# IMAGE_REPO and IMAGE_TAG are set by .github/workflows/publish.yml. The
+# defaults are what a local clone gets, so `docker compose build` works with no
+# registry involved.
+
+services:
+  frontend:
+    image: ${IMAGE_REPO:-local}/frontend:${IMAGE_TAG:-dev}
+    build:
+      context: code/frontend
+      dockerfile: Dockerfile
+    ports:
+      - "${FRONTEND_PORT:-3000}:3000"
+    restart: unless-stopped
+    # This runs code an LLM wrote, for as long as the project stays online, and
+    # it is not the only project on this host. A leak here must cost this
+    # container and nothing else. Raise via the env var if the app needs it —
+    # an OOM-killed service restarts in a loop and that is worse than slow.
+    mem_limit: ${FRONTEND_MEM_LIMIT:-768m}
+    pids_limit: 512
+    healthcheck:
+      # `docker compose up --wait` blocks on this, and the Container workflow
+      # blocks on that — so this is the assertion that the app actually serves,
+      # not merely that the process started.
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:3000/ >/dev/null 2>&1 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 15s
