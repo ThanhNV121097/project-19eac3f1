@@ -20,22 +20,15 @@ export default function Hero() {
     () => {
       const lines = gsap.utils.toArray<HTMLElement>("[data-line]");
 
-      if (calm) {
-        gsap.set("[data-curtain]", { display: "none" });
-        gsap.set([lines, "[data-fade]", "[data-load='nav']"], { opacity: 1, y: 0 });
-        gsap.set("[data-hero-img]", { scale: 1, opacity: 1 });
-        return;
-      }
+      if (calm) return;
 
       const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
-      tl.set(root.current, { visibility: "visible" })
-        .fromTo(
+      tl.fromTo(
           "[data-hero-img]",
           { scale: 1.18, opacity: 0.4 },
           { scale: 1, opacity: 1, duration: 2.2 },
           0,
         )
-        .to("[data-curtain]", { yPercent: -101, duration: 1.4, ease: "power4.inOut" }, 0.15)
         .fromTo(
           lines,
           { yPercent: 115 },
