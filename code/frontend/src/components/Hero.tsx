@@ -103,7 +103,7 @@ export default function Hero() {
 
       <div
         data-hero-copy
-        className="relative mx-auto flex h-full max-w-page flex-col justify-end px-[var(--gutter)] pb-[var(--space-16)]"
+        className="relative z-10 mx-auto flex h-full max-w-page flex-col justify-end px-[var(--gutter)] pb-[var(--space-16)]"
       >
         <T
           data-fade
