@@ -40,7 +40,7 @@ export default function Header() {
           k="site.name"
           as="a"
           href="#top"
-          className="font-display text-[22px] leading-none tracking-display"
+          className="whitespace-nowrap font-display text-[22px] leading-none tracking-display"
         />
 
         <nav className="hidden items-center gap-[var(--space-8)] md:flex">
