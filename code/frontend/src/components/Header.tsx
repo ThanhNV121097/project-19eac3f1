@@ -6,6 +6,10 @@ import { calm } from "../motion";
  * The floating pill bar, taken from Nothing's product pages: the chrome does
  * not sit on the page, it hovers above it. It drops in at the end of the load
  * sequence and tightens its ground once the hero has passed.
+ *
+ * Below md the four links fold into a native <details> disclosure — the
+ * platform already does open/close state, keyboard and Escape, so there is no
+ * menu state in React to get out of step with the page.
  */
 export default function Header() {
   const links = useList<{ label: string; href: string }>("nav.links");
@@ -38,6 +42,7 @@ export default function Header() {
           href="#top"
           className="font-display text-[22px] leading-none tracking-display"
         />
+
         <nav className="hidden items-center gap-[var(--space-8)] md:flex">
           {links.map((l, i) => (
             <T
@@ -49,12 +54,31 @@ export default function Header() {
             />
           ))}
         </nav>
-        <T
-          k="nav.cta.label"
-          as="a"
-          href="#visit"
-          className="rounded-pill border border-accent px-[var(--space-4)] py-[var(--space-2)] text-label text-accent transition-colors hover:bg-accent hover:text-accent-ink"
-        />
+
+        <div className="flex items-center gap-[var(--space-3)]">
+          <T
+            k="nav.cta.label"
+            as="a"
+            href="#visit"
+            className="rounded-pill border border-accent px-[var(--space-4)] py-[var(--space-2)] text-label text-accent transition-colors hover:bg-accent hover:text-accent-ink"
+          />
+          <details className="relative md:hidden">
+            <summary className="list-none cursor-pointer rounded-pill border border-line px-[var(--space-4)] py-[var(--space-2)] text-label uppercase text-ink-soft [&::-webkit-details-marker]:hidden">
+              <T k="nav.menu.label" as="span" />
+            </summary>
+            <nav className="absolute right-0 top-[calc(100%+var(--space-3))] w-[56vw] min-w-[180px] rounded border border-line bg-surface p-[var(--space-2)] shadow-md">
+              {links.map((l, i) => (
+                <T
+                  key={i}
+                  k={`nav.links.${i}.label`}
+                  as="a"
+                  href={l.href}
+                  className="block rounded-sm px-[var(--space-4)] py-[var(--space-3)] text-label uppercase text-ink"
+                />
+              ))}
+            </nav>
+          </details>
+        </div>
       </div>
     </header>
   );
