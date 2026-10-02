@@ -1,0 +1,11 @@
+{
+  "site": { "name": "Your business" },
+  "nav": { "links": [{ "label": "Home", "href": "/" }], "cta": { "label": "Get in touch", "href": "#contact" } },
+  "hero": {
+    "eyebrow": "",
+    "headline": "A headline of a few words",
+    "sub": "One line under it, and no more.",
+    "cta": { "label": "Get in touch", "href": "#contact" }
+  },
+  "footer": { "line": "Your business · District 1, Saigon" }
+}
