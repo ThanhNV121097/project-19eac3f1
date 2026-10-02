@@ -71,7 +71,6 @@ export default function Hero() {
       id="top"
       ref={root}
       className="relative h-[100svh] min-h-[620px] w-full overflow-hidden"
-      style={{ visibility: calm ? "visible" : "hidden" }}
     >
       {/* The picture is an object under one light, not a wash behind the type:
           a tall frame held to the right half, bleeding off the top edge. */}
