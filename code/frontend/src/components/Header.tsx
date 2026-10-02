@@ -76,6 +76,12 @@ export default function Header() {
                   className="block rounded-sm px-[var(--space-4)] py-[var(--space-3)] text-label uppercase text-ink"
                 />
               ))}
+              <T
+                k="nav.cta.label"
+                as="a"
+                href="#visit"
+                className="mt-[var(--space-2)] block rounded-sm border-t border-line px-[var(--space-4)] pb-[var(--space-2)] pt-[var(--space-4)] text-label uppercase text-accent"
+              />
             </nav>
           </details>
         </div>
