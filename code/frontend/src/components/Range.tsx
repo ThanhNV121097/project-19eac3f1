@@ -76,8 +76,11 @@ export default function Range() {
                 className="group flex items-baseline justify-between py-[var(--space-3)] transition-colors duration-200 ease-out hover:text-accent"
               >
                 <T k={`marquee.items.${i}.word`} as="span" className="text-[14px]" />
-                <span className="text-label uppercase text-ink-soft group-hover:text-accent">
-                  {String(i + 1).padStart(2, "0")}
+                <span
+                  aria-hidden="true"
+                  className="text-[14px] text-ink-soft transition-transform duration-200 ease-out group-hover:translate-x-1 group-hover:text-accent"
+                >
+                  ↗
                 </span>
               </a>
             </li>
