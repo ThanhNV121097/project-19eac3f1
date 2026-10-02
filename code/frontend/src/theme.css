@@ -7,12 +7,20 @@
    states and rules only. */
 :root {
   --ground: #0B0B0C;
-  --surface: #141416;
+  --surface: #1C1C20;
   --ink: #F2F0EC;
   --ink-soft: #8C8A87;
   --accent: #5E9BF0;
   --accent-ink: #0B0B0C;
   --line: rgba(242, 240, 236, 0.14);
+
+  /* The lit ground: the one hard cut on the page. A section on --lit swaps the
+     room for daylight with no transition, and carries its own ink and rule. */
+  --lit: #E9E5DD;
+  --lit-ink: #111113;
+  --lit-ink-soft: #55524C;
+  --lit-line: rgba(17, 17, 19, 0.18);
+  --accent-lit: #1D4ED8;
 
   --font-display: "Instrument Serif";
   --font-body: "JetBrains Mono";
