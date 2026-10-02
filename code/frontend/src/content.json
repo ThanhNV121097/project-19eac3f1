@@ -35,11 +35,11 @@
   "range": {
     "eyebrow": "The range",
     "headline": "Five things we know by heart.",
-    "body": "We stock the current line and the model before it, because the model before it is often the better buy. Every unit is sealed, activation-checked on the counter and covered by Apple's own warranty.",
+    "body": "We stock the current line and the model before it, because the model before it is often the better buy. Tell us what you do with the thing all day and we will point at one.",
     "stats": [
       { "value": "5", "label": "Product lines" },
-      { "value": "Sealed", "label": "Every unit" },
-      { "value": "12 mo", "label": "Apple warranty" }
+      { "value": "On the table", "label": "Every model, charged" },
+      { "value": "Set up", "label": "Before you leave" }
     ]
   },
   "devices": {
