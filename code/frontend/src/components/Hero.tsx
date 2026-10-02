@@ -91,7 +91,7 @@ export default function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, color-mix(in srgb, var(--ground) 72%, transparent) 0%, color-mix(in srgb, var(--ground) 20%, transparent) 42%, var(--ground) 100%)",
+              "linear-gradient(180deg, color-mix(in srgb, var(--ground) 55%, transparent) 0%, transparent 32%, color-mix(in srgb, var(--ground) 55%, transparent) 72%, var(--ground) 100%)",
           }}
         />
       </div>
