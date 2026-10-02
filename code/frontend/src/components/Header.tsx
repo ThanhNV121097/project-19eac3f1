@@ -60,7 +60,7 @@ export default function Header() {
             k="nav.cta.label"
             as="a"
             href="#visit"
-            className="rounded-pill border border-accent px-[var(--space-4)] py-[var(--space-2)] text-label text-accent transition-colors hover:bg-accent hover:text-accent-ink"
+            className="hidden whitespace-nowrap rounded-pill border border-accent px-[var(--space-4)] py-[var(--space-2)] text-label text-accent transition-colors hover:bg-accent hover:text-accent-ink sm:inline-block"
           />
           <details className="relative md:hidden">
             <summary className="list-none cursor-pointer rounded-pill border border-line px-[var(--space-4)] py-[var(--space-2)] text-label uppercase text-ink-soft [&::-webkit-details-marker]:hidden">
