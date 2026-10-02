@@ -54,13 +54,15 @@ export default function Devices() {
           scrollTrigger: { trigger: panel, start: "top 60%" },
         });
 
-        // Everything but the last panel dims and recedes as the next covers it.
+        // Only the pinned layout stacks, so only it dims as the next covers it.
         if (i < panels.length - 1) {
-          gsap.to(panel.querySelector("[data-inner]"), {
-            scale: 0.94,
-            opacity: 0.25,
-            ease: "none",
-            scrollTrigger: { trigger: panels[i + 1], start: "top bottom", end: "top top", scrub: true },
+          gsap.matchMedia().add("(min-width: 768px)", () => {
+            gsap.to(panel.querySelector("[data-inner]"), {
+              scale: 0.94,
+              opacity: 0.25,
+              ease: "none",
+              scrollTrigger: { trigger: panels[i + 1], start: "top bottom", end: "top top", scrub: true },
+            });
           });
         }
       });
