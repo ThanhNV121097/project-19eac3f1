@@ -10,7 +10,8 @@
       { "label": "Service", "href": "#service" },
       { "label": "Visit", "href": "#visit" }
     ],
-    "cta": { "label": "Ask about stock", "href": "#visit" }
+    "cta": { "label": "Ask about stock", "href": "#visit" },
+    "menu": { "label": "Menu" }
   },
   "hero": {
     "eyebrow": "Apple IT",
