@@ -1,26 +1,41 @@
 /* The design's tokens. Every colour, face and shape on the site is one of
    these, so the owner changes the whole site by changing a value here — in
-   the Studio, without a rebuild. Components never carry a raw colour. */
+   the Studio, without a rebuild. Components never carry a raw colour.
+
+   Apple IT — a dark room with one light on each object. Near-black graphite
+   ground, warm off-white ink, one cold screen-blue accent used on active
+   states and rules only. */
 :root {
-  --ground: #F6F2EA;
-  --surface: #FFFFFF;
-  --ink: #1B1917;
-  --ink-soft: #5E5954;
-  --accent: #B8412E;
-  --accent-ink: #FFFFFF;
-  --line: rgba(27, 25, 23, 0.12);
+  --ground: #0B0B0C;
+  --surface: #1C1C20;
+  --ink: #F2F0EC;
+  --ink-soft: #8C8A87;
+  --accent: #5E9BF0;
+  --accent-ink: #0B0B0C;
+  --line: rgba(242, 240, 236, 0.14);
 
-  --font-display: "Fraunces";
-  --font-body: "Inter";
-  --weight-display: 500;
-  --tracking-display: -0.02em;
+  /* The lit ground: the one hard cut on the page. A section on --lit swaps the
+     room for daylight with no transition, and carries its own ink and rule. */
+  --lit: #E9E5DD;
+  --lit-ink: #111113;
+  --lit-ink-soft: #55524C;
+  --lit-line: rgba(17, 17, 19, 0.18);
+  --accent-lit: #1D4ED8;
 
-  --radius: 12px;
-  --radius-sm: 6px;
+  --font-display: "Instrument Serif";
+  --font-body: "JetBrains Mono";
+  --weight-display: 400;
+  --tracking-display: -0.035em;
+  --weight-body: 400;
+  --weight-label: 500;
+  --tracking-label: 0.14em;
+  --leading-display: 0.92;
+  --leading-body: 1.7;
+
+  --radius: 2px;
+  --radius-sm: 1px;
   --radius-pill: 999px;
 
-  /* Spacing, shadow and motion: one scale each, so a story can always name a
-     value. A category the design does not use stays defined and unused. */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -29,12 +44,19 @@
   --space-8: 32px;
   --space-12: 48px;
   --space-16: 64px;
-  --shadow-sm: 0 1px 2px rgba(27, 25, 23, 0.06);
-  --shadow-md: 0 8px 24px -12px rgba(27, 25, 23, 0.25);
-  --duration-fast: 120ms;
-  --duration-base: 220ms;
-  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --space-24: 96px;
+  --space-32: 128px;
 
-  --page: 1160px;
-  --gutter: clamp(20px, 5.5vw, 72px);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 24px 60px -24px rgba(0, 0, 0, 0.9);
+  --shadow-glow: 0 0 0 1px rgba(94, 155, 240, 0.35);
+
+  --duration-fast: 160ms;
+  --duration-base: 420ms;
+  --duration-slow: 1100ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+
+  --page: 1360px;
+  --gutter: clamp(20px, 4.5vw, 64px);
 }

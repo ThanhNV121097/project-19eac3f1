@@ -66,7 +66,7 @@ export function useList<V extends Json = { [k: string]: Json }>(k: string): V[] 
  *
  * `as` picks the element; `k` is the key. Anything else goes on the element.
  */
-export function T({ k, as = "span", ...rest }: { k: string; as?: ElementType; className?: string; href?: string }) {
+export function T({ k, as = "span", ...rest }: { k: string; as?: ElementType; className?: string; href?: string } & Record<string, unknown>) {
   const value = useContent<Json>(k);
   const text = value === undefined || value === null ? "" : String(value);
   return createElement(as, { ...rest, "data-edit": k }, text);
