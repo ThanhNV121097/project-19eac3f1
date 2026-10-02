@@ -26,9 +26,4 @@ export function useSmoothScroll() {
   }, []);
 }
 
-/** Splits a heading into its lines so each can ride up out of a clipped box. */
-export function splitLines(el: HTMLElement): HTMLElement[] {
-  return Array.from(el.querySelectorAll<HTMLElement>(".line-mask > *"));
-}
-
 export { gsap, ScrollTrigger };
