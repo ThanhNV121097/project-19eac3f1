@@ -89,19 +89,10 @@ export default function Hero() {
           alt="A titanium-framed iPhone standing on dark stone under a single rim light"
           className="h-[118%] w-full object-cover"
         />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(90deg, var(--ground) 0%, color-mix(in srgb, var(--ground) 30%, transparent) 38%, transparent 100%)",
-          }}
-        />
-        <div
-          className="absolute inset-x-0 bottom-0 h-1/3"
-          style={{
-            background: "linear-gradient(180deg, transparent 0%, var(--ground) 100%)",
-          }}
-        />
+        {/* On a phone the picture sits behind the type, so it is veiled from
+            the bottom; from md it is beside the type and veiled from the left. */}
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_0%,color-mix(in_srgb,var(--ground)_70%,transparent)_55%,var(--ground)_100%)] md:bg-[linear-gradient(90deg,var(--ground)_0%,color-mix(in_srgb,var(--ground)_30%,transparent)_38%,transparent_100%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-[linear-gradient(180deg,transparent_0%,var(--ground)_100%)]" />
       </div>
 
       <div
