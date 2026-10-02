@@ -78,11 +78,11 @@ export default function Devices() {
         <article
           key={i}
           data-panel
-          className="sticky top-0 h-[100svh] min-h-[640px] w-full bg-ground"
+          className="relative w-full bg-ground py-[var(--space-16)] md:sticky md:top-0 md:h-[100svh] md:min-h-[640px] md:py-0"
         >
           <div
             data-inner
-            className="mx-auto grid h-full max-w-page grid-cols-1 items-center gap-[var(--space-8)] px-[var(--gutter)] md:grid-cols-12"
+            className="mx-auto grid max-w-page grid-cols-1 items-center gap-[var(--space-8)] px-[var(--gutter)] md:h-full md:grid-cols-12"
           >
             <div className="order-2 md:order-1 md:col-span-5">
               <div className="flex items-baseline gap-[var(--space-4)]">
