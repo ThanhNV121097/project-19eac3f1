@@ -51,17 +51,39 @@ export default function Range() {
       className="mx-auto max-w-page px-[var(--gutter)] py-[var(--space-32)]"
     >
       <T k="range.eyebrow" as="p" data-reveal className="text-label uppercase text-accent" />
-      <h2 className="mt-[var(--space-8)] max-w-[16ch] text-[clamp(40px,6.4vw,92px)]">
-        <span className="line-mask">
-          <T k="range.headline" as="span" data-line className="block" />
-        </span>
-      </h2>
-      <T
-        k="range.body"
-        as="p"
-        data-reveal
-        className="mt-[var(--space-12)] max-w-[62ch] text-[15px] leading-body text-ink-soft"
-      />
+
+      <div className="mt-[var(--space-8)] grid grid-cols-1 gap-[var(--space-12)] md:grid-cols-12">
+        <div className="md:col-span-7">
+          <h2 className="max-w-[16ch] text-[clamp(40px,6.4vw,92px)]">
+            <span className="line-mask">
+              <T k="range.headline" as="span" data-line className="block" />
+            </span>
+          </h2>
+          <T
+            k="range.body"
+            as="p"
+            data-reveal
+            className="mt-[var(--space-8)] max-w-[56ch] text-[15px] leading-body text-ink-soft"
+          />
+        </div>
+
+        {/* The lines themselves, as an index: the same list the band runs. */}
+        <ul className="md:col-span-4 md:col-start-9 md:self-end">
+          {lines.map((_, i) => (
+            <li key={i} data-rule-row className="border-t border-line last:border-b">
+              <a
+                href="#devices"
+                className="group flex items-baseline justify-between py-[var(--space-3)] transition-colors duration-200 ease-out hover:text-accent"
+              >
+                <T k={`marquee.items.${i}.word`} as="span" className="text-[14px]" />
+                <span className="text-label uppercase text-ink-soft group-hover:text-accent">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <dl className="mt-[var(--space-24)] grid grid-cols-1 gap-[var(--space-8)] md:grid-cols-3">
         {stats.map((_, i) => (
