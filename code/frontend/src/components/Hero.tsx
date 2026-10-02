@@ -85,7 +85,7 @@ export default function Hero() {
       <div className="absolute inset-x-0 top-0 -z-10 h-[56%] overflow-hidden md:inset-y-0 md:left-auto md:right-0 md:h-auto md:w-[52vw]">
         <img
           data-hero-img
-          src="/images/hero.jpg"
+          src="/images/hero-device.jpg"
           alt="A titanium-framed iPhone standing on dark stone under a single rim light"
           className="h-full w-full object-cover object-[center_42%] md:h-[118%] md:object-center"
         />
