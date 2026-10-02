@@ -88,3 +88,24 @@ gets the page with everything in place and no scroll-tied movement at all.
   cut a hard vertical seam down the middle of the hero. Re-graded the veil to a
   four-stop gradient so the photograph dissolves into the ground instead of
   ending at a line.
+- Round 5 (1440 + 390, after TL's review): the page was one flat near-black the
+  whole way down — `--surface` was a 4% step off `--ground`, so the section
+  that was meant to cut tone cut nothing, and teenage.engineering's hard swap
+  was in these notes but not on the screen. Added a `--lit` ground (`#E9E5DD`)
+  with its own ink, rule and accent, and gave the counter section daylight on a
+  straight edge. The dark half is now lit against something.
+- Round 6 (1440): the band ran past like any other row. Pinned it — with
+  `position: sticky` scoped to the range block rather than a ScrollTrigger pin,
+  because a GSAP pin with `pinSpacing: false` rode over the device stack and
+  collapsed the stats row under it. Boc.Studio's band now holds the top of the
+  window while the range scrolls under it, dimming as it is passed, and lets go
+  at the join.
+- Round 7 (1440): the device stack was one layout five times. It is four now —
+  the phone beside its specs, the Mac and the AirPods full-bleed with the copy
+  in the object's shadow, the iPad mirrored, the watch floating in the room on
+  a radial mask with no edge at all. Awwwards' frame-before-image reveal landed
+  where it belongs: the box is drawn first, then the picture clips up into it.
+- Round 8 (390): the pill bar had no way into the page below 768px. The links
+  fold into a native `<details>` disclosure — the platform already handles
+  open, close, Escape and the keyboard — and the call to action moved inside it
+  so the bar is a wordmark and one control at phone width.
