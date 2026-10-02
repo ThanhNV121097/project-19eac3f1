@@ -120,7 +120,7 @@ export default function Hero() {
           as="p"
           className="mb-[var(--space-6)] text-label uppercase text-accent"
         />
-        <h1 className="text-[clamp(52px,10.5vw,152px)]">
+        <h1 className="max-w-[12ch] text-[clamp(52px,9vw,138px)]">
           <span className="line-mask">
             <T k="hero.line1" as="span" data-line className="block" />
           </span>
