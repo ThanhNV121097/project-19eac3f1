@@ -57,7 +57,7 @@ export default function Range() {
     <section
       id="range"
       ref={root}
-      className="mx-auto max-w-page px-[var(--gutter)] py-[var(--space-32)]"
+      className="mx-auto max-w-page px-[var(--gutter)] pb-[var(--space-16)] pt-[var(--space-32)]"
     >
       <T k="range.eyebrow" as="p" data-reveal className="text-label uppercase text-accent" />
 
