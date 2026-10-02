@@ -1,11 +1,175 @@
 {
-  "site": { "name": "Your business" },
-  "nav": { "links": [{ "label": "Home", "href": "/" }], "cta": { "label": "Get in touch", "href": "#contact" } },
-  "hero": {
-    "eyebrow": "",
-    "headline": "A headline of a few words",
-    "sub": "One line under it, and no more.",
-    "cta": { "label": "Get in touch", "href": "#contact" }
+  "site": {
+    "name": "Apple IT",
+    "tagline": "An Apple store"
   },
-  "footer": { "line": "Your business · District 1, Saigon" }
+  "nav": {
+    "links": [
+      { "label": "Range", "href": "#range" },
+      { "label": "Devices", "href": "#devices" },
+      { "label": "Service", "href": "#service" },
+      { "label": "Visit", "href": "#visit" }
+    ],
+    "cta": { "label": "Ask about stock", "href": "#visit" }
+  },
+  "hero": {
+    "eyebrow": "Apple IT",
+    "line1": "Every Apple",
+    "line2": "under one light.",
+    "sub": "We sell the whole Apple range and hand it to you already set up — your data moved, your iCloud signed in, your screen protector on straight.",
+    "cta": { "label": "See the range", "href": "#range" },
+    "secondary": { "label": "Book a setup", "href": "#visit" },
+    "caption": "In the shop today",
+    "scroll": "Scroll"
+  },
+  "marquee": {
+    "items": [
+      { "word": "iPhone" },
+      { "word": "Mac" },
+      { "word": "iPad" },
+      { "word": "Apple Watch" },
+      { "word": "AirPods" },
+      { "word": "Accessories" }
+    ]
+  },
+  "range": {
+    "eyebrow": "The range",
+    "headline": "Five things we know by heart.",
+    "body": "We stock the current line and the model before it, because the model before it is often the better buy. Every unit is sealed, activation-checked on the counter and covered by Apple's own warranty.",
+    "stats": [
+      { "value": "5", "label": "Product lines" },
+      { "value": "Sealed", "label": "Every unit" },
+      { "value": "12 mo", "label": "Apple warranty" }
+    ]
+  },
+  "devices": {
+    "eyebrow": "Devices",
+    "items": [
+      {
+        "index": "iPhone",
+        "name": "iPhone",
+        "line": "The one you will hold for three years.",
+        "body": "From the current Pro down to the model two years old. We will tell you which one you actually need, and it is usually not the most expensive.",
+        "specs": [
+          { "k": "Storage", "v": "128 GB — 1 TB" },
+          { "k": "Finish", "v": "Titanium, aluminium" },
+          { "k": "From", "v": "16.990.000 ₫" }
+        ],
+        "image": "/images/iphone.jpg",
+        "alt": "An iPhone face down on a dark surface, one hard light across the camera lenses"
+      },
+      {
+        "index": "Mac",
+        "name": "Mac",
+        "line": "Laptops that outlast the job you bought them for.",
+        "body": "MacBook Air and MacBook Pro, plus Mac mini for the desk. We will size the memory to what you open at once, not to the spec sheet.",
+        "specs": [
+          { "k": "Chip", "v": "M-series" },
+          { "k": "Memory", "v": "8 GB — 64 GB" },
+          { "k": "From", "v": "24.990.000 ₫" }
+        ],
+        "image": "/images/mac.jpg",
+        "alt": "An open aluminium laptop glowing in a dim room"
+      },
+      {
+        "index": "iPad",
+        "name": "iPad",
+        "line": "A screen for drawing, reading and the second monitor.",
+        "body": "iPad, iPad Air and iPad Pro, with Apple Pencil and the keyboard cases. Come in and draw on one before you decide which tip you like.",
+        "specs": [
+          { "k": "Sizes", "v": "11\" and 13\"" },
+          { "k": "Pencil", "v": "Pro and USB-C" },
+          { "k": "From", "v": "9.990.000 ₫" }
+        ],
+        "image": "/images/ipad.jpg",
+        "alt": "A tablet lying flat with a slim metal stylus beside it"
+      },
+      {
+        "index": "Watch",
+        "name": "Apple Watch",
+        "line": "Sized on your wrist, not on a chart.",
+        "body": "Series, SE and Ultra, with the bands in the drawer to try. We fit the band and pair it to your iPhone before you leave the counter.",
+        "specs": [
+          { "k": "Cases", "v": "40 — 49 mm" },
+          { "k": "Bands", "v": "Fitted in store" },
+          { "k": "From", "v": "6.490.000 ₫" }
+        ],
+        "image": "/images/watch.jpg",
+        "alt": "A smartwatch with a woven band standing on a dark stone block"
+      },
+      {
+        "index": "Audio",
+        "name": "AirPods",
+        "line": "Listen to them here before you buy them.",
+        "body": "AirPods, AirPods Pro and AirPods Max, with a tip-fit check so the seal is right. A bad seal is why people think the bass is missing.",
+        "specs": [
+          { "k": "Range", "v": "AirPods — Max" },
+          { "k": "Fit check", "v": "On the counter" },
+          { "k": "From", "v": "3.790.000 ₫" }
+        ],
+        "image": "/images/audio.jpg",
+        "alt": "Two white wireless earbuds in an open charging case on a dark surface"
+      }
+    ]
+  },
+  "service": {
+    "eyebrow": "What happens at the counter",
+    "headline": "You leave with it working.",
+    "body": "A new device is three hours of transferring, signing in and wondering which backup is the right one. We do that part at the counter while you wait.",
+    "items": [
+      {
+        "title": "Transfer your data",
+        "body": "Messages, photos, apps and WhatsApp history moved from your old phone — Android included."
+      },
+      {
+        "title": "Sign in and secure",
+        "body": "Apple Account, iCloud, two-factor and Find My switched on, with recovery written down for you."
+      },
+      {
+        "title": "Film and fit",
+        "body": "Tempered glass applied dust-free, case fitted, band sized. We redo it free if a bubble shows up."
+      },
+      {
+        "title": "Trade in the old one",
+        "body": "We quote your old device on the counter, wipe it in front of you and take it off the price."
+      }
+    ]
+  },
+  "visit": {
+    "eyebrow": "Visit",
+    "headline": "Come and hold one.",
+    "body": "Every model on this page is on the table, charged and unlocked. Ask about stock before you travel and we will put one aside for the day.",
+    "cta": { "label": "Ask about stock", "href": "#visit" },
+    "note": "Prices on this page are samples and change with the exchange rate. Ask for today's figure."
+  },
+  "footer": {
+    "line": "An Apple store.",
+    "columns": [
+      {
+        "title": "Range",
+        "links": [
+          { "label": "iPhone", "href": "#devices" },
+          { "label": "Mac", "href": "#devices" },
+          { "label": "iPad", "href": "#devices" }
+        ]
+      },
+      {
+        "title": "More",
+        "links": [
+          { "label": "Apple Watch", "href": "#devices" },
+          { "label": "AirPods", "href": "#devices" },
+          { "label": "Accessories", "href": "#range" }
+        ]
+      },
+      {
+        "title": "At the counter",
+        "links": [
+          { "label": "Data transfer", "href": "#service" },
+          { "label": "Trade-in", "href": "#service" },
+          { "label": "Warranty", "href": "#range" }
+        ]
+      }
+    ],
+    "colophon": "Apple, iPhone, iPad, Mac, Apple Watch and AirPods are trademarks of Apple Inc."
+  }
 }
