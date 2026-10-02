@@ -1,0 +1,40 @@
+/* The design's tokens. Every colour, face and shape on the site is one of
+   these, so the owner changes the whole site by changing a value here — in
+   the Studio, without a rebuild. Components never carry a raw colour. */
+:root {
+  --ground: #F6F2EA;
+  --surface: #FFFFFF;
+  --ink: #1B1917;
+  --ink-soft: #5E5954;
+  --accent: #B8412E;
+  --accent-ink: #FFFFFF;
+  --line: rgba(27, 25, 23, 0.12);
+
+  --font-display: "Fraunces";
+  --font-body: "Inter";
+  --weight-display: 500;
+  --tracking-display: -0.02em;
+
+  --radius: 12px;
+  --radius-sm: 6px;
+  --radius-pill: 999px;
+
+  /* Spacing, shadow and motion: one scale each, so a story can always name a
+     value. A category the design does not use stays defined and unused. */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --shadow-sm: 0 1px 2px rgba(27, 25, 23, 0.06);
+  --shadow-md: 0 8px 24px -12px rgba(27, 25, 23, 0.25);
+  --duration-fast: 120ms;
+  --duration-base: 220ms;
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  --page: 1160px;
+  --gutter: clamp(20px, 5.5vw, 72px);
+}
