@@ -87,7 +87,7 @@ export default function Hero() {
           data-hero-img
           src="/images/hero-device.jpg"
           alt="A titanium-framed iPhone standing on dark stone under a single rim light"
-          className="h-full w-full object-cover object-[center_42%] md:h-[118%] md:object-center"
+          className="h-full w-full object-cover object-[center_42%] brightness-[1.55] contrast-[1.08] md:h-[118%] md:object-center"
         />
         {/* On a phone the picture sits behind the type, so it is veiled from
             the bottom; from md it is beside the type and veiled from the left. */}
