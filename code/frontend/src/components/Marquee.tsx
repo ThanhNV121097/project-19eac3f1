@@ -38,7 +38,7 @@ export default function Marquee() {
         const pin = gsap.timeline({
           scrollTrigger: {
             trigger: band,
-            start: "top top",
+            start: "top top+=72",
             endTrigger: "#range",
             end: "bottom 65%",
             pin: true,
