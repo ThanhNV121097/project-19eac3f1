@@ -87,11 +87,7 @@ export default function Hero() {
         <div className="absolute inset-x-0 bottom-0 hidden h-1/3 bg-[linear-gradient(180deg,transparent_0%,var(--ground)_100%)] md:block" />
       </div>
 
-      <div
-        data-curtain
-        className="absolute inset-0 z-30 bg-ground"
-        aria-hidden="true"
-      />
+      <div className="curtain absolute inset-0 z-30 bg-ground" aria-hidden="true" />
 
       <div
         data-hero-copy
